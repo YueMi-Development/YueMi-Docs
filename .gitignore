@@ -1,0 +1,13 @@
+# Python virtual environment
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Zensical / MkDocs build directories
+site/
+.zensical/
+dist/
+build/
+.cache/
+.pytest_cache/
