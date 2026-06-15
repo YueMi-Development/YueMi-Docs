@@ -26,3 +26,12 @@ Recommend settings for config files.
 | Command | Description | Permissions |
 |---------|-------------|-------------|
 | `/recommend` | Show Recommended Config File Settings | `yuemi.admin.recommend` |
+
+## License Command
+Show license and metadata information.
+
+| Command | Description | Permissions |
+|---------|-------------|-------------|
+| `/license` | Show license and metadata information | `yuemi.admin.license` |
+| `/license --verbose` | Show license, hardware ID, and metadata information | `yuemi.admin.license` |
+
