@@ -41,8 +41,6 @@ world:
       enableRegionizedChunkTicking: true
       executorThreadCount: 4
       executorThreadPriority: 7
-misc:
-  mace-damage-limit: -1.0
 ```
 
 ### Fields - World
@@ -175,12 +173,3 @@ Optimizations for multi-threaded and async world features.
 - **executorThreadPriority**<br />
   Thread priority for regionized chunk tick execution.  
   > default: `7`
-
----
-
-### Fields - Misc
-Miscellaneous configurations.
-
-- **mace-damage-limit**<br />
-  Sets a limit on maximum mace damage.
-  > default: `-1.0` (no limit)
