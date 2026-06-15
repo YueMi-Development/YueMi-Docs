@@ -1,173 +1,62 @@
 ---
+title: Home
 icon: lucide/rocket
 ---
 
-# Get started
+<p align="center">
+  <img src="https://cdn.yuemi.org/yuemi/YueMi-Banner-Dark.png" width="320" alt="YueMi Logo"/>
+</p>
 
-For full documentation visit [zensical.org](https://zensical.org/docs/).
+<p align="center">
+  <a href="https://dsc.gg/yuemi">
+    <img src="https://img.shields.io/discord/1145991395388162119?label=discord&style=for-the-badge&colorA=19201a&colorB=298046" alt="Discord"/>
+  </a>
+</p>
 
-## Commands
+---
 
-* [`zensical new`][new] - Create a new project
-* [`zensical serve`][serve] - Start local web server
-* [`zensical build`][build] - Build your site
+## YueMi Development
 
-  [new]: https://zensical.org/docs/usage/new/
-  [serve]: https://zensical.org/docs/usage/preview/
-  [build]: https://zensical.org/docs/usage/build/
+**YueMi Development** is a software development organization operating under **PT Yue Mitrajaya Abadi**, focused on building efficient, scalable, and practical solutions for modern software ecosystems.
 
-## Examples
+Founded by **[Neko Monci](https://github.com/NekoMonci12)**, YueMi Development was created with a clear goal:  
+**build tools that actually solve real technical problems, not bloated abstractions.**
 
-### Admonitions
+---
 
-> Go to [documentation](https://zensical.org/docs/authoring/admonitions/)
+## Organization Overview
 
-!!! note
+- **Organization Name:** YueMi Development  
+- **Legal Entity:** PT Yue Mitrajaya Abadi  
+- **Founder:** Neko Monci
 
-    This is a **note** admonition. Use it to provide helpful information.
+YueMi Development primarily works on:
+- Backend systems
+- Game server infrastructure
+- Performance optimization
+- Developer tooling
+- Open-source & private software solutions
 
-!!! warning
+---
 
-    This is a **warning** admonition. Be careful!
+## What We Build
 
-### Details
+Our projects are driven by **performance, maintainability, and clarity**.
 
-> Go to [documentation](https://zensical.org/docs/authoring/admonitions/#collapsible-blocks)
+Key focus areas include:
+- **Minecraft Java ecosystem tooling** (Spigot/Paper plugins, optimizers, utilities)
+- **Server-side performance optimization**
+- **Licensing & security systems**
+- **Automation tools for developers**
+- **Custom software for education and small-scale enterprises**
 
-??? info "Click to expand for more info"
+We prioritize **clean architecture over shortcuts** and **measurable improvements over hype**.
 
-    This content is hidden until you click to expand it.
-    Great for FAQs or long explanations.
+---
 
-## Code Blocks
+## Development Philosophy
 
-> Go to [documentation](https://zensical.org/docs/authoring/code-blocks/)
-
-``` python hl_lines="2" title="Code blocks"
-def greet(name):
-    print(f"Hello, {name}!") # (1)!
-
-greet("Python")
-```
-
-1.  > Go to [documentation](https://zensical.org/docs/authoring/code-blocks/#code-annotations)
-
-    Code annotations allow to attach notes to lines of code.
-
-Code can also be highlighted inline: `#!python print("Hello, Python!")`.
-
-## Content tabs
-
-> Go to [documentation](https://zensical.org/docs/authoring/content-tabs/)
-
-=== "Python"
-
-    ``` python
-    print("Hello from Python!")
-    ```
-
-=== "Rust"
-
-    ``` rs
-    println!("Hello from Rust!");
-    ```
-
-## Diagrams
-
-> Go to [documentation](https://zensical.org/docs/authoring/diagrams/)
-
-``` mermaid
-graph LR
-  A[Start] --> B{Error?};
-  B -->|Yes| C[Hmm...];
-  C --> D[Debug];
-  D --> B;
-  B ---->|No| E[Yay!];
-```
-
-## Footnotes
-
-> Go to [documentation](https://zensical.org/docs/authoring/footnotes/)
-
-Here's a sentence with a footnote.[^1]
-
-Hover it, to see a tooltip.
-
-[^1]: This is the footnote.
-
-
-## Formatting
-
-> Go to [documentation](https://zensical.org/docs/authoring/formatting/)
-
-- ==This was marked (highlight)==
-- ^^This was inserted (underline)^^
-- ~~This was deleted (strikethrough)~~
-- H~2~O
-- A^T^A
-- ++ctrl+alt+del++
-
-## Icons, Emojis
-
-> Go to [documentation](https://zensical.org/docs/authoring/icons-emojis/)
-
-* :sparkles: `:sparkles:`
-* :rocket: `:rocket:`
-* :tada: `:tada:`
-* :memo: `:memo:`
-* :eyes: `:eyes:`
-
-## Maths
-
-> Go to [documentation](https://zensical.org/docs/authoring/math/)
-
-$$
-\cos x=\sum_{k=0}^{\infty}\frac{(-1)^k}{(2k)!}x^{2k}
-$$
-
-!!! warning "Needs configuration"
-    Note that MathJax is included via a `script` tag on this page and is not
-    configured in the generated default configuration to avoid including it
-    in a pages that do not need it. See the documentation for details on how
-    to configure it on all your pages if they are more Maths-heavy than these
-    simple starter pages.
-
-<script id="MathJax-script" src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [["\\(", "\\)"]],
-      displayMath: [["\\[", "\\]"]],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      ignoreHtmlClass: ".*|",
-      processHtmlClass: "arithmatex"
-    }
-  };
-
-  document$.subscribe(() => {
-    MathJax.startup.output.clearCache()
-    MathJax.typesetClear()
-    MathJax.texReset()
-    MathJax.typesetPromise()
-  })
-</script>
-
-## Task Lists
-
-> Go to [documentation](https://zensical.org/docs/authoring/lists/#using-task-lists)
-
-* [x] Install Zensical
-* [x] Configure `zensical.toml`
-* [x] Write amazing documentation
-* [ ] Deploy anywhere
-
-## Tooltips
-
-> Go to [documentation](https://zensical.org/docs/authoring/tooltips/)
-
-[Hover me][example]
-
-  [example]: https://example.com "I'm a tooltip!"
+- **Efficiency first** – If it’s slow, it’s wrong.
+- **Readable > clever** – Code should be understood, not admired.
+- **Scalable by design** – Small today, ready for growth tomorrow.
+- **Honest engineering** – No unnecessary dependencies, no magic.
