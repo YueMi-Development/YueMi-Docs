@@ -2,7 +2,7 @@
 
 To use any of YueMi Development's public APIs (such as `BingoGacha-api`), you need to register the YueMi Maven Repository in your project build configuration.
 
-## 📦 Repository URL
+## Repository URL
 
 The public Maven repository is hosted at:
 ```
@@ -11,7 +11,7 @@ https://repo.yuemi.my.id/repository/maven-public/
 
 ---
 
-## 🛠️ Build Configuration Examples
+## Build Configuration Examples
 
 ### Gradle (Kotlin DSL)
 Add the repository to your `repositories` block:
