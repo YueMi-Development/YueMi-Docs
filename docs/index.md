@@ -6,7 +6,7 @@ sidebar_position: 1
 ---
 
 <p align="center">
-  <img src="https://cdn.yuemi.org/yuemi/YueMi-Banner-Dark.png" width="320" alt="YueMi Logo"/>
+  <img src="https://cdn.yuemi.org/yuemi/YueMi-Banner-White.png" width="320" alt="YueMi Logo"/>
 </p>
 
 <p align="center">
