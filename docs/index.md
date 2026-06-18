@@ -2,6 +2,7 @@
 title: Home
 icon: lucide/rocket
 slug: /
+sidebar_position: 1
 ---
 
 <p align="center">
