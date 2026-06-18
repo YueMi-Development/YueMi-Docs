@@ -1,10 +1,15 @@
+---
+sidebar_position: 1
+title: "Card Configuration"
+---
+
 # Card Configuration Guide
 
 Bingo Gacha configurations are structured inside the `cards/` directory. Each `.yml` file in this directory represents a standalone gacha card template.
 
 ---
 
-## 📐 Layout & Base Properties
+## Layout & Base Properties
 
 ```yaml
 # Title of the GUI card inventory
@@ -27,7 +32,7 @@ buyable: true
 
 ---
 
-## 💸 Cost Configurations
+## Cost Configurations
 
 Cards support both **Vault economy** cost and **Item** cost.
 
@@ -57,7 +62,7 @@ roll-cost:
 
 ---
 
-## 🏆 Rewards
+## Rewards
 
 Rewards are divided into `rewards` (granted upon card completion) and `unused-point-rewards` (granted for each unrolled slot when completing with the `STRAIGHT_LINE` rule).
 
@@ -80,7 +85,7 @@ unused-point-rewards:
 
 ---
 
-## 📊 Slots Configuration
+## Slots Configuration
 
 You must define items matching the grid slots (9 slots for `3x3`, 25 slots for `5x5` numbered `0` to `24`).
 

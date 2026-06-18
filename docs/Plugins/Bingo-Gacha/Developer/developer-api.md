@@ -2,9 +2,9 @@
 
 Bingo Gacha provides a simple API to integrate with other plugins, manage player progress, and listen to custom gameplay events.
 
-## 📦 Dependency Integration
+## Dependency Integration
 
-To consume the Bingo Gacha API, first ensure you have registered the [YueMi Maven Repository](../../YueMi-API/maven.md) in your project configuration, then add the API dependency:
+To consume the Bingo Gacha API, first ensure you have registered the [YueMi Maven Repository](../../../YueMi-API/maven.md) in your project configuration, then add the API dependency:
 
 ### Gradle (Kotlin DSL)
 ```kotlin
@@ -25,7 +25,7 @@ dependencies {
 
 ---
 
-## 🔑 Accessing the API
+## Accessing the API
 
 The API can be accessed via `BingoGachaApiProvider` or standard Bukkit Service Manager.
 
@@ -42,7 +42,7 @@ BingoGachaApi api = Bukkit.getServicesManager().load(BingoGachaApi.class);
 
 ---
 
-## 🛠️ API Capabilities
+## API Capabilities
 
 The `BingoGachaApi` interface exposes repositories, managers, and template properties:
 
@@ -80,7 +80,7 @@ public interface BingoGachaApi {
 
 ---
 
-## 🔔 Custom Events
+## Custom Events
 
 You can listen to events fired by Bingo Gacha in your standard Bukkit event listeners.
 
