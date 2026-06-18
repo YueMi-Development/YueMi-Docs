@@ -70,7 +70,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/scoial-card.webp',
       colorMode: {
-        respectPrefersColorScheme: true,
+        defaultMode: 'dark',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
       },
       navbar: {
         title: 'YueMi Docs',
@@ -120,8 +122,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} YueMi Development. Built with Docusaurus.`,
       },
       prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
+        theme: prismThemes.vsLight,
+        darkTheme: prismThemes.vsDark,
       },
     }),
 };

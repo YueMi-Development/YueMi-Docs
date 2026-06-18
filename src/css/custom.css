@@ -1,13 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300..600;1,300..600&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Modern Premium Design System for YueMi Docs
  */
 
 :root {
-  /* Zensical/Material Orange Color Scheme */
+  /* Zensical/Material Orange Color Scheme with harmonized steps */
   --ifm-color-primary: #e65100;
   --ifm-color-primary-dark: #cf4900;
   --ifm-color-primary-darker: #c44500;
@@ -16,14 +14,26 @@
   --ifm-color-primary-lighter: #fd6c1d;
   --ifm-color-primary-lightest: #fe8e50;
 
+  /* Typography */
   --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-heading-font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   --ifm-code-font-family: 'JetBrains Mono', monospace;
-  --ifm-code-font-size: 90%;
+  --ifm-code-font-size: 88%;
   
-  --docusaurus-highlighted-code-line-bg: rgba(230, 81, 0, 0.1);
+  /* Layout tweaks */
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-background-color: #f8f9fa;
+  --ifm-card-background-color: #ffffff;
+  
+  /* Accents */
+  --docusaurus-highlighted-code-line-bg: rgba(230, 81, 0, 0.08);
+  --theme-gradient: linear-gradient(135deg, #ff9800 0%, #e65100 100%);
+  --border-radius-premium: 12px;
+  --ifm-table-border-color: rgba(0, 0, 0, 0.06);
+  --ifm-hr-border-color: rgba(0, 0, 0, 0.08);
 }
 
-/* For readability concerns, choose a lighter palette in dark mode. */
+/* Dark Mode Premium Theme */
 [data-theme='dark'] {
   --ifm-color-primary: #ff9800;
   --ifm-color-primary-dark: #e68900;
@@ -33,30 +43,222 @@
   --ifm-color-primary-lighter: #ffb240;
   --ifm-color-primary-lightest: #ffd28f;
   
-  --docusaurus-highlighted-code-line-bg: rgba(255, 152, 0, 0.15);
+  --ifm-navbar-background-color: #0b0e14;
+  --ifm-background-color: #0b0e14;
+  --ifm-card-background-color: #11151d;
+  
+  --docusaurus-highlighted-code-line-bg: rgba(255, 152, 0, 0.12);
+  --ifm-toc-border-color: #1e2530;
+  --ifm-table-border-color: rgba(255, 255, 255, 0.06);
+  --ifm-hr-border-color: rgba(255, 255, 255, 0.08);
 }
 
-/* Optional: styling to resemble Zensical (MkDocs Material) layout */
+/* Base Body Styles */
+body {
+  background-color: var(--ifm-background-color);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Navbar Enhancements */
 .navbar {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  border-bottom: 1px solid var(--ifm-toc-border-color);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(230, 81, 0, 0.1);
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
-/* Make active links and headers pop with orange */
+[data-theme='dark'] .navbar {
+  background-color: rgba(11, 14, 20, 0.85);
+  border-bottom: 1px solid rgba(255, 152, 0, 0.15);
+}
+
+.navbar__title {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: var(--ifm-heading-color);
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Inline Code Blocks */
+code {
+  font-size: 0.85em;
+  background-color: rgba(230, 81, 0, 0.08);
+  border: 1px solid rgba(230, 81, 0, 0.15);
+  color: var(--ifm-color-primary-dark);
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+[data-theme='dark'] code {
+  background-color: rgba(255, 152, 0, 0.1);
+  border: 1px solid rgba(255, 152, 0, 0.2);
+  color: var(--ifm-color-primary-light);
+}
+
+/* Code Blocks Styling */
+.theme-code-block {
+  border-radius: var(--border-radius-premium) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+  overflow: hidden;
+}
+
+.theme-code-block pre,
+.theme-code-block pre code {
+  border-radius: var(--border-radius-premium) !important;
+  overflow: hidden !important;
+}
+
+[data-theme='dark'] .theme-code-block {
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Sidebar Menu Items */
+.menu__list-item {
+  margin-top: 0.25rem;
+}
+
+.menu__link {
+  font-size: 0.92rem;
+  border-radius: 8px !important;
+  padding: 0.4rem 0.8rem !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu__link:hover {
+  background-color: rgba(230, 81, 0, 0.05) !important;
+  color: var(--ifm-color-primary) !important;
+}
+
+[data-theme='dark'] .menu__link:hover {
+  background-color: rgba(255, 152, 0, 0.08) !important;
+}
+
 .menu__link--active {
+  background-color: rgba(230, 81, 0, 0.08) !important;
   color: var(--ifm-color-primary) !important;
   font-weight: 600;
 }
 
-.table-of-contents__link--active {
-  color: var(--ifm-color-primary) !important;
+[data-theme='dark'] .menu__link--active {
+  background-color: rgba(255, 152, 0, 0.12) !important;
 }
 
-/* Custom styling for sidebar headers to match Material style */
-.menu__caret {
-  transition: transform 0.2s ease;
+/* Premium Tables */
+table {
+  display: table !important;
+  width: 100% !important;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.5rem 0;
+  border-radius: var(--border-radius-premium);
+  overflow: hidden;
+  border: 1px solid var(--ifm-table-border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
 }
 
-.theme-doc-sidebar-menu {
-  font-weight: 500;
+[data-theme='dark'] table {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: var(--ifm-card-background-color);
+}
+
+th {
+  background-color: rgba(230, 81, 0, 0.04) !important;
+  color: var(--ifm-color-primary-dark);
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  padding: 0.75rem 1rem !important;
+  border-bottom: 2px solid var(--ifm-table-border-color) !important;
+}
+
+[data-theme='dark'] th {
+  background-color: rgba(255, 152, 0, 0.05) !important;
+  color: var(--ifm-color-primary-light);
+}
+
+td {
+  padding: 0.75rem 1rem !important;
+  border-bottom: 1px solid var(--ifm-table-border-color) !important;
+}
+
+tr:last-child td {
+  border-bottom: none !important;
+}
+
+/* Prevent table cell background from clipping border radius */
+tr:first-child th:first-child {
+  border-top-left-radius: var(--border-radius-premium) !important;
+}
+tr:first-child th:last-child {
+  border-top-right-radius: var(--border-radius-premium) !important;
+}
+tr:last-child td:first-child {
+  border-bottom-left-radius: var(--border-radius-premium) !important;
+}
+tr:last-child td:last-child {
+  border-bottom-right-radius: var(--border-radius-premium) !important;
+}
+
+/* Admonitions (Callouts) Styling */
+.alert {
+  border-radius: var(--border-radius-premium) !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02) !important;
+  padding: 1rem 1.25rem !important;
+}
+
+.alert--info {
+  background-color: rgba(230, 81, 0, 0.04) !important;
+  border-color: rgba(230, 81, 0, 0.2) !important;
+  color: var(--ifm-color-primary-dark) !important;
+}
+.alert--info svg {
+  fill: var(--ifm-color-primary) !important;
+}
+
+/* Scrollbars styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ifm-color-primary);
+}
+
+/* Custom styling for horizontal lines (hr) to blend into the background */
+hr {
+  background-color: var(--ifm-hr-border-color) !important;
+  opacity: 0.4;
 }
