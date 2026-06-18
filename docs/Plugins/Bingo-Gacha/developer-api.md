@@ -9,7 +9,7 @@ Bingo Gacha provides a simple API to integrate with other plugins, manage player
 
 ## Dependency Integration
 
-To consume the Bingo Gacha API, first ensure you have registered the [YueMi Maven Repository](../../../YueMi-API/maven.md) in your project configuration, then add the API dependency:
+To consume the Bingo Gacha API, first ensure you have registered the [YueMi Maven Repository](../../YueMi-API/maven.md) in your project configuration, then add the API dependency:
 
 ### Gradle (Kotlin DSL)
 ```kotlin

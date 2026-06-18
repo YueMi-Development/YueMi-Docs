@@ -68,7 +68,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/scoial-card.webp',
       colorMode: {
         respectPrefersColorScheme: true,
       },
@@ -76,7 +76,7 @@ const config = {
         title: 'YueMi Docs',
         logo: {
           alt: 'YueMi Docs Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
           {
