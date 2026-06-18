@@ -21,14 +21,14 @@ becomes:
 
 | Permission                 | Description |
 |-----------------------------|-------------|
-| <code style="white-space: nowrap;">yuemi.sign.color</code> | Allows use of `&0`–`&f` color codes (black → white, plus standard colors). |
-| <code style="white-space: nowrap;">yuemi.sign.style</code> | Allows use of `&l`, `&o`, `&m`, `&n` formatting codes (bold, italic, strikethrough, underline). |
-| <code style="white-space: nowrap;">yuemi.sign.magic</code> | Allows use of `&k` "magic" obfuscated text effect. |
+| <code style={{whiteSpace: 'nowrap'}}>yuemi.sign.color</code> | Allows use of `&0`–`&f` color codes (black → white, plus standard colors). |
+| <code style={{whiteSpace: 'nowrap'}}>yuemi.sign.style</code> | Allows use of `&l`, `&o`, `&m`, `&n` formatting codes (bold, italic, strikethrough, underline). |
+| <code style={{whiteSpace: 'nowrap'}}>yuemi.sign.magic</code> | Allows use of `&k` "magic" obfuscated text effect. |
 
 ## Examples
 
 | Input Text | Permission Required | Result |
 |------------|----------------------|--------|
-| `&aWelcome` | `yuemi.sign.color` | <span style="color: green;">Welcome</span> |
+| `&aWelcome` | `yuemi.sign.color` | <span style={{color: 'green'}}>Welcome</span> |
 | `&lBold Text` | `yuemi.sign.style` | **Bold Text** |
-| `&kSecret` | `yuemi.sign.magic` | <span style="color: gray;">▒▒▒▒▒▒</span> (random obfuscated characters) |
+| `&kSecret` | `yuemi.sign.magic` | <span style={{color: 'gray'}}>▒▒▒▒▒▒</span> (random obfuscated characters) |

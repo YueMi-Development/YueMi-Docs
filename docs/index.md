@@ -1,6 +1,7 @@
 ---
 title: Home
 icon: lucide/rocket
+slug: /
 ---
 
 <p align="center">

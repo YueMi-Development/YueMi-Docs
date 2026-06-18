@@ -1,3 +1,8 @@
+---
+title: Compatible Plugins
+sidebar_position: 98
+---
+
 # Compatible Plugins
 
 Bingo Gacha works seamlessly with other plugins to enrich card challenges, economies, and rewards. Integration is handled either directly or through **YueMi Libs**.

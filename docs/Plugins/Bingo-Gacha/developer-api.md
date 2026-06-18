@@ -1,3 +1,8 @@
+---
+title: Developer API
+sidebar_position: 99
+--- 
+
 # Developer API Documentation
 
 Bingo Gacha provides a simple API to integrate with other plugins, manage player progress, and listen to custom gameplay events.

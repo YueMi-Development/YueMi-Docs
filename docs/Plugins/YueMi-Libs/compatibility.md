@@ -1,6 +1,6 @@
 ---
-sidebar_position: 4
-title: Compatibility
+sidebar_position: 98
+title: Compatible Plugins
 ---
 
 # Compatibility
