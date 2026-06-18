@@ -452,5 +452,102 @@ aside[class*='docSidebarContainer'] {
   border-left: none !important;
 }
 
+/* Sidebar item icons (Home, Folder, Page) */
+.menu__link::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-color: currentColor;
+  margin-right: 8px;
+  flex-shrink: 0;
+  vertical-align: middle;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.menu__link:hover::before,
+.menu__link--active::before {
+  opacity: 1;
+}
+
+/* Default Page icon */
+.menu__link::before {
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'><path d='M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z'/></svg>") no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'><path d='M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z'/></svg>") no-repeat center;
+  -webkit-mask-size: contain;
+}
+
+/* Folder icon (for categories/sublists) */
+.menu__link--sublist::before {
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'><path d='M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z'/></svg>") no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'><path d='M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z'/></svg>") no-repeat center;
+  -webkit-mask-size: contain;
+}
+
+/* Home icon (for href="/") */
+.menu__link[href="/"]::before {
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'><path d='M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z'/></svg>") no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'><path d='M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z'/></svg>") no-repeat center;
+  -webkit-mask-size: contain;
+}
+
+/* Breadcrumbs custom icons */
+.breadcrumbs__item .breadcrumbs__link::before {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-color: currentColor;
+  margin-right: 6px;
+  flex-shrink: 0;
+  vertical-align: middle;
+  opacity: 0.6;
+}
+
+/* Home breadcrumb - already has SVG, don't show custom before icon */
+.breadcrumbs__item:first-child .breadcrumbs__link::before {
+  display: none !important;
+}
+
+/* Intermediate breadcrumbs (folders) */
+.breadcrumbs__item:not(:first-child):not(:last-child) .breadcrumbs__link::before {
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'><path d='M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z'/></svg>") no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'><path d='M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z'/></svg>") no-repeat center;
+  -webkit-mask-size: contain;
+}
+
+/* Active page breadcrumb (page) */
+.breadcrumbs__item:last-child .breadcrumbs__link::before {
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'><path d='M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z'/></svg>") no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'><path d='M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z'/></svg>") no-repeat center;
+  -webkit-mask-size: contain;
+}
+
+/* Card & Pagination Outlines */
+.card,
+.pagination-nav__link {
+  border: 1px solid var(--ifm-table-border-color) !important;
+  border-radius: var(--border-radius-premium) !important;
+  background-color: var(--ifm-card-background-color) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02) !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.pagination-nav__link:hover,
+.card:hover {
+  border-color: var(--ifm-color-primary) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05) !important;
+  transform: translateY(-1px);
+}
+
+
+
+
 
 
