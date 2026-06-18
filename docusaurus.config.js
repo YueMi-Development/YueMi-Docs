@@ -99,9 +99,8 @@ const config = {
                 <img src="/img/YueMi-Banner-White.png" alt="YueMi Logo" class="custom-footer__logo" />
               </div>
               <p class="custom-footer__desc">
-                Quality hosting experience, flowing smoothly like water.<br/>
-                Cutting-edge cloud technology with performance that flows<br/>
-                perfectly for your servers.
+                Building efficient, scalable, and practical solutions for modern software ecosystems.<br/>
+                Dedicated to performance, maintainability, and clean engineering.
               </p>
               <div class="custom-footer__copyright">
                 © 2026 YUEMI DEVELOPMENT. | ALL RIGHTS RESERVED.
