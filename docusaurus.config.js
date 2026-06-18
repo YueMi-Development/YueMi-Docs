@@ -83,8 +83,9 @@ const config = {
         items: [
           {
             href: 'https://github.com/YueMi-Development/YueMi-Docs',
-            label: 'GitHub',
             position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
           },
         ],
       },
