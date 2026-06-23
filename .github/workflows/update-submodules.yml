@@ -1,0 +1,50 @@
+name: Update Submodules
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Run every 24 hours
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Update submodules to latest commits
+        run: |
+          git submodule update --remote --recursive
+
+      - name: Commit and push changes if any
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          changed_subs=""
+          if [ -f .gitmodules ]; then
+            for path in $(git config --file .gitmodules --get-regexp path | awk '{print $2}'); do
+              if ! git diff --quiet "$path"; then
+                if [ -z "$changed_subs" ]; then
+                  changed_subs="$path"
+                else
+                  changed_subs="$changed_subs, $path"
+                fi
+              fi
+            done
+          fi
+          
+          if [ -n "$changed_subs" ]; then
+            echo "Submodules updated: $changed_subs"
+            git commit -a -m "chore: auto-update submodules ($changed_subs) to latest"
+            git push
+          else
+            echo "No submodule updates found."
+          fi
