@@ -2,6 +2,4 @@
 
 API documentation for `YueMi-API`.
 
-You can view the full Javadocs by clicking the link below:
-
-**[Browse YueMi API Javadocs](pathname:///YueMi-API/javadocs/index.html)**
+<iframe src="/YueMi-API/javadocs-static/index.html" style={{width: '100%', height: 'calc(100vh - 180px)', border: 'none', borderRadius: '8px'}} />
