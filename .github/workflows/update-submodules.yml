@@ -11,6 +11,8 @@ permissions:
 jobs:
   update-submodules:
     runs-on: ubuntu-latest
+    outputs:
+      update_status: ${{ steps.check.outputs.update_status }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -24,6 +26,7 @@ jobs:
           git submodule update --remote --recursive
 
       - name: Commit and push changes if any
+        id: check
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -45,6 +48,29 @@ jobs:
             echo "Submodules updated: $changed_subs"
             git commit -a -m "chore: auto-update submodules ($changed_subs) to latest"
             git push
+            echo "update_status=success" >> $GITHUB_OUTPUT
           else
             echo "No submodule updates found."
+            echo "update_status=skipped" >> $GITHUB_OUTPUT
+          fi
+
+  status-report:
+    needs: update-submodules
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Result
+        run: |
+          JOB_RESULT="${{ needs.update-submodules.result }}"
+          UPDATE_STATUS="${{ needs.update-submodules.outputs.update_status }}"
+          
+          if [ "$JOB_RESULT" = "success" ]; then
+            if [ "$UPDATE_STATUS" = "success" ]; then
+              echo "Result: Success (Submodules were successfully updated and committed)"
+            else
+              echo "Result: Skipped (No updates found in submodules)"
+            fi
+          else
+            echo "Result: Failed (Submodule update job ended with status: $JOB_RESULT)"
+            exit 1
           fi
