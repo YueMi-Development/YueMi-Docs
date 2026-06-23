@@ -1,0 +1,4 @@
+[submodule "static/YueMi-API/javadocs"]
+	path = static/YueMi-API/javadocs
+	url = https://github.com/YueMi-Development/YueMi-MC-Libs.git
+	branch = gh-pages
