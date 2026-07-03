@@ -2,3 +2,7 @@
 	path = static/Plugins/YueMi-Libs/javadocs-static
 	url = https://github.com/YueMi-Development/YueMi-MC-Libs.git
 	branch = gh-pages
+[submodule "static/Plugins/MMO-Mechanics/javadocs-static"]
+	path = static/Plugins/MMO-Mechanics/javadocs-static
+	url = https://github.com/YueMi-Development/MC-MMO-Mechanics.git
+	branch = gh-pages
