@@ -30,8 +30,8 @@ The items provider API supports multiple namespaces concurrently. You can refere
 | :--- | :--- | :--- | :--- |
 | **Vanilla Minecraft** | `minecraft:` | **Compatible** | Built-in. Supports materials and CustomModelData bracket syntax. |
 | **CraftEngine** | `craftengine:` | **Compatible** | Supported out-of-the-box (requires CraftEngine 26.6.2+). |
-| **ItemsAdder** | `itemsadder:` | *Planned* | Future integration. |
-| **Nexo** | `nexo:` | *Planned* | Future integration. |
+| **ItemsAdder** | `itemsadder:` | **Compatible** | Fully supported. |
+| **Nexo** | `nexo:` | **Compatible** | Fully supported. |
 
 ---
 
