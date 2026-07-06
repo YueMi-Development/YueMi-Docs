@@ -6,3 +6,11 @@
 	path = static/Plugins/MMO-Mechanics/javadocs-static
 	url = https://github.com/YueMi-Development/MC-MMO-Mechanics.git
 	branch = gh-pages
+[submodule "static/Plugins/MMO-Items/javadocs-static"]
+	path = static/Plugins/MMO-Items/javadocs-static
+	url = https://github.com/YueMi-Development/MC-MMO-Items.git
+	branch = gh-pages
+[submodule "static/Plugins/MMO-Mobs/javadocs-static"]
+	path = static/Plugins/MMO-Mobs/javadocs-static
+	url = https://github.com/YueMi-Development/MC-MMO-Mobs.git
+	branch = gh-pages
