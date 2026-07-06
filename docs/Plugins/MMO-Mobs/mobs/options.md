@@ -70,59 +70,37 @@ These options can be applied to all custom mobs (mostly affecting `LivingEntity`
 
 These options apply only to specific Minecraft entity classes and will be ignored on others.
 
-### Breedables & Ageables
-*Applies to Cows, Sheep, Pigs, Chickens, Wolves, Cats, Rabbits, etc.*
+| Option | Entity Group / Mob Type | Type | Description |
+| :--- | :--- | :--- | :--- |
+| `Age` | Breedables / Ageables | Integer | Sets the numerical age. Use `-1` for a baby, `1` for an adult. |
+| `AgeLock` | Breedables / Ageables | Boolean | Locks the age to prevent the baby from naturally growing up. |
+| `Adult` | Breedables / Ageables | Boolean | Sets the adult status directly. |
+| `Baby` | Breedables / Ageables | Boolean | Sets the baby status directly. |
+| `Color` | Sheep / Wolves / Llamas | String | Sets wool color (Sheep) or collar color (Wolves, Cats). Supports dye colors (e.g., `RED`, `LIME`). |
+| `Size` | Slimes & Magma Cubes | Integer | Sets the size scale of the slime/magma cube. |
+| `PreventSlimeSplit` | Slimes & Magma Cubes | Boolean | Prevents splitting into smaller slimes/magma cubes upon death. |
+| `ExplosionRadius` | Creepers | Integer | Sets the explosion power radius. |
+| `FuseTicks` | Creepers | Integer | Ticks before exploding. |
+| `SuperCharged` | Creepers | Boolean | Spawns the creeper powered (charged with lightning overlay). |
+| `PreventSuicide` | Creepers | Boolean | Prevents the creeper from dying during its explosion. |
+| `CanMove` | Armor Stand | Boolean | Sets if the armor stand can move. |
+| `CanTick` | Armor Stand | Boolean | Sets if the armor stand ticks. |
+| `HasArms` | Armor Stand | Boolean | Displays arms. |
+| `HasBasePlate` | Armor Stand | Boolean | Toggles the bottom stone base plate. |
+| `Small` | Armor Stand | Boolean | Spawns the small variant of the armor stand. |
+| `Marker` | Armor Stand | Boolean | Makes the armor stand a marker (completely non-interactable). |
+| `ItemHead`, `ItemBody`, `ItemLegs`, `ItemFeet`, `ItemHand`, `ItemOffhand` | Armor Stand | String | Equip custom keys from YueMiLibs directly onto the stand. |
+| `Anger` | Bees | Integer | Ticks of anger duration. |
+| `HasNectar` | Bees | Boolean | If the bee is carrying pollen. |
+| `HasStung` | Bees | Boolean | If the bee has stung an entity. |
+| `Saddled` | Saddleable Mobs | Boolean | Spawns the entity saddled (Camel, Pig, Strider, Horses). |
+| `CatType` | Cats | String | Cat variant (e.g. `BLACK`, `SIAMESE`, `CALICO`). |
+| `FoxType` | Foxes | String | Fox variant (`RED` or `SNOW`). |
+| `Variant` | Frogs / Wolves / Chickens | String | Frog/Wolf biome variant (e.g., `WARM`, `COLD` for Frogs; `black`, `chestnut` for Wolves). |
+| `ImmuneToZombification` | Hoglins / Piglins | Boolean | Prevents conversion to Zoglins/Zombie Piglins. |
+| `Huntable` | Hoglins | Boolean | Allows/prevents Hoglins from being hunted by Piglins. |
+| `AbleToHunt` | Piglins | Boolean | Allows/prevents Piglins from hunting. |
+| `Profession` | Villagers / Zombie Villagers | String | Profession type (e.g. `MASON`, `FARMER`, `CLERIC`). |
+| `Type` | Villagers | String | Villager biome variant (e.g. `DESERT`, `PLAINS`, `SNOW`). |
+| `Level` | Villagers | Integer | Profession level (`1` to `5`). |
 
-- **`Age`** (Integer): Set numerical age. Use `-1` for a baby, `1` for an adult.
-- **`AgeLock`** (Boolean): Locks the age to prevent the baby from naturally growing up.
-- **`Adult`** (Boolean): Set adult status directly.
-- **`Baby`** (Boolean): Set baby status directly.
-
-### Colorables
-*Applies to Sheep, Wolves, Llamas, Cats*
-
-- **`Color`** (String): Sets wool color (Sheep) or collar color (Wolves, Cats). Supports standard dye names (e.g. `RED`, `LIME`, `BLUE`).
-
-### Slimes & Magma Cubes
-- **`Size`** (Integer): Sets the size scale of the slime (e.g. `1` to `10`).
-- **`PreventSlimeSplit`** (Boolean): Prevents the slime/magma cube from splitting into smaller ones upon death.
-
-### Creepers
-- **`ExplosionRadius`** (Integer): Sets the blast power radius.
-- **`FuseTicks`** (Integer): Ticks before exploding.
-- **`SuperCharged`** (Boolean): Spawns the creeper powered (charged with lightning overlay).
-- **`PreventSuicide`** (Boolean): Prevents the creeper from dying during its explosion.
-
-### Armor Stands
-- **`CanMove`** (Boolean): Sets if the armor stand can move.
-- **`CanTick`** (Boolean): Sets if the armor stand ticks.
-- **`HasArms`** (Boolean): Displays arms.
-- **`HasBasePlate`** (Boolean): Toggles the bottom stone base plate.
-- **`Small`** (Boolean): Spawns the small variant.
-- **`Marker`** (Boolean): Makes the stand a marker (completely non-interactable).
-- **`ItemHead` / `ItemBody` / `ItemLegs` / `ItemFeet` / `ItemHand` / `ItemOffhand`** (String): Equip custom keys from YueMiLibs directly onto the stand.
-
-### Neutral mobs & Bees
-- **`Anger`** (Integer): Ticks of anger duration.
-- **`HasNectar`** (Boolean): If the bee carries nectar.
-- **`HasStung`** (Boolean): If the bee has stung.
-
-### Saddleable Mobs (Camel, Pig, Strider, Horses)
-- **`Saddled`** (Boolean): Spawns the entity saddled.
-
-### Cats & Foxes
-- **`CatType`** (String): Cat variant (e.g. `BLACK`, `SIAMESE`, `CALICO`).
-- **`FoxType`** (String): Fox variant (`RED` or `SNOW`).
-
-### Frogs
-- **`Variant`** (String): Frog variant (`WARM`, `COLD`, `TEMPERATE`).
-
-### Hoglins & Piglins
-- **`ImmuneToZombification`** (Boolean): Prevents conversion to Zoglins/Zombie Piglins.
-- **`Huntable`** (Boolean): Allows/prevents Hoglins from being hunted by Piglins.
-- **`AbleToHunt`** (Boolean): Allows/prevents Piglins from hunting.
-
-### Villagers & Zombie Villagers
-- **`Profession`** (String): Profession type (e.g. `MASON`, `FARMER`, `CLERIC`).
-- **`Type`** (String): Villager biome variant (e.g. `DESERT`, `PLAINS`, `SNOW`).
-- **`Level`** (Integer): Profession level (`1` to `5`).
