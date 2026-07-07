@@ -89,3 +89,40 @@ Forces the mob to run away from nearby players within a specified radius:
 Halts all pathfinding, targeting, and movement behaviors for the mob:
 - **Format**: `donothing`
 - **Example**: `0 donothing`
+
+---
+
+## Target Selectors
+
+Target Selectors determine what entities a mob will try to target and attack. They are defined under the `AITargetSelectors` configuration list:
+
+```json5
+{
+  name: "Patrol Guard",
+  type: "ZOMBIE",
+  health: 40,
+  options: {
+    AITargetSelectors: [
+      "0 clear",
+      "1 players 16",
+      "2 hurtbytarget"
+    ]
+  }
+}
+```
+
+### Supported AI Targets
+
+| Target Name / Alias | Description |
+| :--- | :--- |
+| `clear` | Clears all target selectors from the mob. |
+| `hurtbytarget` / `attacker` / `damager` | Targets whichever entity attacks this mob. |
+| `players` / `player` | Targets players within a specific radius. <br/> **Format**: `players [radius]` (Defaults to 16 blocks) |
+| `villagers` / `villager` | Targets villagers within a specific radius. <br/> **Format**: `villagers [radius]` (Defaults to 16 blocks) |
+| `irongolem` / `iron_golems` / `iron_golem` | Targets iron golems within a specific radius. <br/> **Format**: `irongolem [radius]` (Defaults to 16 blocks) |
+| `monsters` / `monster` | Targets monsters/hostile entities within a specific radius. <br/> **Format**: `monsters [radius]` (Defaults to 16 blocks) |
+| `ownerattacker` / `ownerhurtby` / `ownerdamager` | Targets whichever entity attacks this mob's owner. |
+| `ownertarget` / `ownerattack` / `ownerhurt` | Targets whichever entity this mob's owner is currently targeting or attacking. |
+| `parenthurtby` / `parentdamager` / `parentattacker` | Targets whichever entity attacks this mob's parent. |
+| `parenttarget` / `parenthurt` / `parentattack` | Targets whichever entity this mob's parent is currently targeting or attacking. |
+
