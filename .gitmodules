@@ -14,3 +14,7 @@
 	path = static/Plugins/MMO-Mobs/javadocs-static
 	url = https://github.com/YueMi-Development/MC-MMO-Mobs.git
 	branch = gh-pages
+[submodule "static/Plugins/Villager-Tweaks/javadocs-static"]
+	path = static/Plugins/Villager-Tweaks/javadocs-static
+	url = https://github.com/YueMi-Development/MC-Villager-Tweaks.git
+	branch = gh-pages
