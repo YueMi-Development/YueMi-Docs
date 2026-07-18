@@ -12,7 +12,7 @@ The global configuration of Villager Tweaks is stored in the `config.yml` file.
 ```yaml
 # VillagerTweaks Configuration
 # Do not change this unless you know what you are doing.
-config-version: 3
+config-version: 4
 
 # Enable or disable the plugin features requires restart.
 enable-tweaks: true
@@ -23,4 +23,12 @@ witch-curing:
   cure-time: 60
   enable-particles: true
   enable-sound: true
+
+# Settings for zombie villager features.
+zombie-villagers:
+  # How villagers are infected by zombies.
+  # Options: vanilla, always-zombie, random, none
+  infection-type: vanilla
+  # Whether zombie villagers can be cured back into villagers.
+  allow-curing: true
 ```
