@@ -1,6 +1,6 @@
 ---
 title: Item Configurations
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Item Configuration
@@ -43,6 +43,9 @@ rewards:
   - type: "item"
     id: "golden_ticket"
     amount: 2
+  - type: "command"
+    value: "give %player% minecraft:diamond 1"
+    amount: 1
   - type: "item"
     id: "lucky_charm"
     amount: 1
@@ -68,4 +71,4 @@ rewards:
 | `custom-model-data` | Integer | 0 | Resource pack CustomModelData value. |
 | `worth` | Double | 0.0 | Financial value of the item in the auction system. |
 | `virtual-item` | Boolean | false | If `true`, the winner receives the item's `worth` in currency. If `false`, the rewards list is evaluated and distributed. |
-| `rewards` | List | — | List of rewards distributed when a non-virtual item is won. Supports type `"item"` referencing other custom items. |
+| `rewards` | List | — | List of rewards distributed when a non-virtual item is won. <br/><br/>Each reward entry supports the following fields:<br/>- `type` (String): `"item"` or `"command"`. <br/>- `id` (String): *(Required for type `"item"`)* The custom item ID to give to the player. <br/>- `value` (String): *(Required for type `"command"`)* The console command to run, replacing `%player%` with the winner's username. <br/>- `amount` (Integer): *(Optional, default 1)* Number of times to give the item or run the command. |

@@ -1,6 +1,6 @@
 ---
 title: Round Events
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Round Events Configuration
