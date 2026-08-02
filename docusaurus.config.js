@@ -71,7 +71,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/scoial-card.webp',
+      image: 'img/social-card.webp',
       colorMode: {
         defaultMode: 'dark',
         disableSwitch: true,
