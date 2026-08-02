@@ -17,6 +17,6 @@ dependencies {
 }
 ```
 
-:::tip Shade it in
+:::tip[Shade it in]
 Because the library is not bundled with the server, you must shade it into your plugin JAR using the [Shadow Gradle plugin](https://gradleup.com/shadow/).
 :::
