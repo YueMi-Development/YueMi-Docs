@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkyue_mi_docs=self.webpackChunkyue_mi_docs||[]).push([["5889"],{8488(e,c,s){s.d(c,{createArchitectureServices:()=>u.S});var u=s(89221);s(51400)}}]);
