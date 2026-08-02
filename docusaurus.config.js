@@ -132,6 +132,7 @@ const config = {
       prism: {
         theme: prismThemes.vsLight,
         darkTheme: prismThemes.vsDark,
+        additionalLanguages: ['java', 'kotlin', 'yaml', 'groovy'],
       },
     }),
 };
