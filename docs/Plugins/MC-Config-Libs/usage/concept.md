@@ -19,8 +19,10 @@ If you simply release a new plugin version with a new default configuration, exi
 
 Instead of writing complex, error-prone parser code to manually read, compare, and modify YAML values every time you release an update, **MC Config Libs** structures migration into discrete, incremental steps:
 
-```text
-User's Config (v1) ──► Apply Step 2 ──► Config (v2) ──► Apply Step 3 ──► Final Config (v3)
+```mermaid
+graph LR
+    v1["User's Config (v1)"] -->|"Apply Step 2"| v2["Config (v2)"]
+    v2 -->|"Apply Step 3"| v3["Final Config (v3)"]
 ```
 
 Each change is represented by a single Java class called a `MigrationStep`. When your plugin starts, the library:
