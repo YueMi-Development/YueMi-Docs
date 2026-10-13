@@ -27,13 +27,12 @@ The configuration structure supports the following sections:
   * Supports MiniMessage styling (e.g., `<gray>A blade charged with the power of storms.`).
 
 ### 3. Skills
-* **`skills`** (List of Objects): 
-  * Binds custom skills from MMO Mechanics to this item.
+* **`skills`** (List of Objects):
+  * Binds skills from MMO Mechanics to this item.
   * Fields:
     * `skill` (String): The skill registration key matching the filename in MMO Mechanics (e.g. `lightning_radius_storm`).
-    * `trigger` (String): The event that casts the skill.
-      * `onAttack`: Casts the skill when hitting an entity with this item in hand.
-      * `onInteract`: Casts the skill when right-clicking while holding this item.
+    * `trigger` (String): The trigger that casts the skill. Standard values are `onAttack`, `onInteract`, `onEquip`, `onUnequip`, `onDamaged`, `onTimer`, and `command` — see [MMO Mechanics skill-config](../../MMO-Mechanics/configs/skill-config) for the full list.
+  * The bindings are exposed as `List<ItemSkillConfig>` (where `ItemSkillConfig` is a public record `record(@NotNull String skill, @Nullable String trigger)` in `org.yuemi.mmoitems.api.item`) via `MmoItemsApi.getItemSkills(ItemStack)`.
 
 ---
 

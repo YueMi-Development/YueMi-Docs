@@ -15,3 +15,9 @@ Conditions check rules before executing mechanics, deciding whether the target o
 | :--- | :--- | :--- |
 | **[IsDay](./details/isday.md)** | `isday` | Evaluates to `true` if the caster's world time is during daytime hours. |
 | **[IsNight](./details/isnight.md)** | `isnight` | Evaluates to `true` if the caster's world time is during nighttime hours. |
+
+## Inventory Conditions
+
+| Condition | Aliases / Shorthands | Description |
+| :--- | :--- | :--- |
+| **[IsEquippedAsAccessory](./details/isequippedasaccessory.md)** | `isequippedasaccessory` | True if the source item is currently equipped in an accessory slot (requires MC-MMO-Accessories). |

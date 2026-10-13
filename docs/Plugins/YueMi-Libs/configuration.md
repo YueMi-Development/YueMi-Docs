@@ -5,9 +5,7 @@ title: Configuration
 
 # Configuration
 
-The main configuration file is located at `plugins/YueMiLibs/config.yml`. It handles system-wide hooks and sets options for standard providers.
-
-Here is the default configuration file for **version 3**:
+The main configuration file is located at `plugins/YueMiLibs/config.yml`. It handles system-wide hooks and sets options for the standard providers. Per-feature modules also ship their own default configs (e.g. `module-gui`, `module-event`) which can override module-specific behaviour.
 
 ```yaml
 # YueMi Libs Configuration
@@ -39,20 +37,13 @@ providers:
 
 ---
 
-## Configuration Options
+## Per-Feature Packages
 
-### `hooks.economy`
-*   `enabled` (Boolean): Set to `true` to enable hooking into economy plugins.
-*   `provider` (String): The economy system to hook. Currently supports `"Vault"`.
+YueMi Libs splits its public surface into per-feature packages under `org.yuemi.libs.api.*`. Each is shipped through the single `YueMiLibs-api` artifact:
 
-### `hooks.items.craftengine`
-*   `enabled` (Boolean): Set to `true` to hook into the **CraftEngine** plugin when available on the server. This exposes the `craftengine:` namespace to the items API.
+- `org.yuemi.libs.api.gui` — `GuiApi`, `Gui`, `GuiLayer`, `GuiItem`, `SlotBehavior`, `GuiListener` helpers.
+- `org.yuemi.libs.api.event` — `EventApi`, `EventProvider`, `BukkitEvents`, `PlayerEvents`, `EntityEvents`, `BlockEvents`.
+- `org.yuemi.libs.api.items` — `ItemsApi` (ItemsAdder / CraftEngine / Nexo / vanilla namespaces).
+- `org.yuemi.libs.api.economy` — `EconomyApi` (Vault bridge).
 
-### `providers.minecraft.match-mode`
-Configures how strictly the default vanilla item provider matches items when checking (`getItemCount`) or removing (`takeItem`) them from player inventories:
-
-| Match Mode | Description |
-| :--- | :--- |
-| `ID` | Matches only the material type (e.g., matching `minecraft:stone` matches any stone blocks, ignoring NBT, names, lore, or model data). |
-| `CUSTOM_MODEL_DATA` | Matches the material type AND Custom Model Data. E.g., matching a sword with custom model data `101` will ignore swords with model data `102` or no model data. |
-| `NBT` | Matches strictly using Bukkit's `.isSimilar()` comparison, requiring all names, lore, enchantments, and tag metadata to be identical. |
+If you only need the items / economy surface you can disable the GUI and event modules in `plugin.yml`; YueMi Libs gracefully no-ops when its modules are not enabled.
