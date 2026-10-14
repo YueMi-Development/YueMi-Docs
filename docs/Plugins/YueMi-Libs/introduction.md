@@ -24,13 +24,15 @@ Rather than writing third-party hooks (like Vault or CraftEngine) repeatedly in 
 
 ## Modules
 
-## Modules
-
 YueMi-Libs provides several module APIs. See the Modules documentation below.
 
 | Module | Description |
 |--------|-------------|
 | [General](./Modules/General) | RandomApi, CascadingDropSystem, CompareApi, FormatApi |
+| [Economy](./Modules/Economy) | Vault-compatible economy system with multi-provider support |
+| [Events](./Modules/Events) | Typed event subscription with fluent builder API |
+| [GUI](./Modules/GUI) | Layer-based GUI builder with dynamic items |
+| [Items](./Modules/Items) | Multi-provider items (Nexo, ItemsAdder, CraftEngine) |
 
 The project uses a two-tier module architecture:
 
