@@ -24,6 +24,14 @@ Rather than writing third-party hooks (like Vault or CraftEngine) repeatedly in 
 
 ## Modules
 
+## Modules
+
+YueMi-Libs provides several module APIs. See the Modules documentation below.
+
+| Module | Description |
+|--------|-------------|
+| [General](./Modules/General) | RandomApi, CascadingDropSystem, CompareApi, FormatApi |
+
 The project uses a two-tier module architecture:
 
 1. **core-api** — public interfaces, constants, and static helpers. Zero server-side code; ideal as a `compileOnly` dependency.
